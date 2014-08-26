@@ -4,12 +4,10 @@
   	</ion-nav-buttons>
       <ion-content>
       	<ion-list>
-      		<ion-item ng-repeat="link in links">
-      			<a href="{{link.data.url}}">
-      				{{link.data.domain}}
-      				<b>{{link.data.subreddit}}</b>
-      				{{link.data.author}}
-      			</a>
+      		<ion-item ng-repeat="link in links" href="#/app/comments">
+      			{{link.data.title}}
+      			<b>{{link.data.subreddit}}</b>
+      			{{link.data.author}}
       		</ion-item>
       	</ion-list>
       </ion-content>

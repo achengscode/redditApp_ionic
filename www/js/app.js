@@ -33,6 +33,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: "HomeCtrl"
       }  
     }
+  })
+
+  .state("app.comments", {
+    url: "/comments",
+    views: {"menuContent" : {
+        templateUrl: "comments.html",
+        controller: "CommentCtrl"
+      }
+    }
   });
   
   $urlRouterProvider.otherwise("/app/home");
