@@ -2,6 +2,10 @@
 	<ion-content>
 		{{articleID}}
 		{{content}}
-		{{comments}}
+		<ion-list>
+			<ion-item ng-repeat="comment in comments.data.children">
+				{{comment.data.body}}
+			</ion-item>
+		</ion-list>
 	</ion-content>
  </ion-view>

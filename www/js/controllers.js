@@ -25,6 +25,7 @@ angular.module("starter.controllers", [])
 		$scope.content = data[0];
 		$scope.comments = data[1];
 		$scope.loading = false;
+		console.log(data[1]);
 	});
 	response.error(function(data, status, headers, config){
 		alert("uhoh, an error occured");
