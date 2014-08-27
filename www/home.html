@@ -2,9 +2,10 @@
       <ion-content>
       	<ion-list>
       		<ion-item ng-repeat="link in links" href="#/app/comments/{{link.data.id}}">
-      			{{link.data.title}}
+      			<p>{{link.data.title}}</p>
       			<b>{{link.data.subreddit}}</b>
-      			{{link.data.author}}
+      			<p>{{link.data.author}}</p>
+            <img ng-show={{link.data.thumbail != null}} ng-src={{link.data.thumbnail}} />
       		</ion-item>
       	</ion-list>
       </ion-content>

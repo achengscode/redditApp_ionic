@@ -19,10 +19,12 @@ angular.module("starter.controllers", [])
 .controller("CommentCtrl", function($scope, $http, $stateParams, article) {
 	$scope.articleID = article.get($stateParams.id);
 	$scope.articleContent = null;
+	$scope.loading = true;
 	var response = $http.get("http://www.reddit.com/" + $stateParams.id + "/.json");
 	response.success(function (data, status, headers, config) {
 		$scope.content = data[0];
 		$scope.comments = data[1];
+		$scope.loading = false;
 	});
 	response.error(function(data, status, headers, config){
 		alert("uhoh, an error occured");
