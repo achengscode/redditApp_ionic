@@ -1,6 +1,8 @@
 <ion-view title="Comments">
 	<ion-content>
 		{{articleID}}
+		<h1>{{content.data.children[0].data.title}}</h1>
+		<img class="reddit-post" ng-show="{{content.data.url !== null}}" ng-src="{{content.data.url}}"/>
 		{{content}}
 		<ion-list>
 			<ion-item ng-repeat="comment in comments.data.children">

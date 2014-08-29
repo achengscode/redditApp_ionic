@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+
+.reddit-post {
+	max-width: 400px;
+	max-height: 400px;
+}

@@ -5,7 +5,7 @@
       			<p class="reddit-link-title">{{link.data.title}}</p>
       			<b>{{link.data.subreddit}}</b>
       			<p>{{link.data.author}}</p>
-            <img ng-show={{link.data.thumbail != null}} ng-src={{link.data.thumbnail}} />
+            <img ng-show="{{link.data.thumbnail != null}}" ng-src="{{link.data.thumbnail}}" />
       		</ion-item>
       	</ion-list>
       </ion-content>

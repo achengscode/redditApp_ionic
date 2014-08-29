@@ -5,7 +5,6 @@ angular.module("starter.controllers", [])
 .controller("HomeCtrl", function($scope, $http) {
 	// $scope represents the page
 	$scope.links = null; 
-
 	// get the reddit front page when DOM is ready
 	var response = $http.get("http://www.reddit.com/.json");
 	response.success(function (data, status, headers, config){
@@ -22,10 +21,9 @@ angular.module("starter.controllers", [])
 	$scope.loading = true;
 	var response = $http.get("http://www.reddit.com/" + $stateParams.id + "/.json");
 	response.success(function (data, status, headers, config) {
-		$scope.content = data[0];
+		$scope.content = data[0].data.children[0];
 		$scope.comments = data[1];
 		$scope.loading = false;
-		console.log(data[1]);
 	});
 	response.error(function(data, status, headers, config){
 		alert("uhoh, an error occured");
